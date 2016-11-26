@@ -1,0 +1,163 @@
+{
+  "paragraphs": [
+    {
+      "title": "2.1",
+      "text": "def fib(n: Int): Int \u003d n match {\n    case i if (i \u003c\u003d 0) \u003d\u003e 0\n    case 1 \u003d\u003e 1\n    case _ \u003d\u003e fib(n-1) + fib(n-2)\n}\n\nfib(0) \u003d\u003d 0\nfib(1) \u003d\u003d 1\nfib(2) \u003d\u003d 1\nfib(5) \u003d\u003d 5\nfib(-2) \u003d\u003d 0",
+      "dateUpdated": "Nov 26, 2016 3:27:55 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1480169251096_2068831450",
+      "id": "20161126-140731_1836760465",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nfib: (n: Int)Int\n\nres24: Boolean \u003d true\n\nres25: Boolean \u003d true\n\nres26: Boolean \u003d true\n\nres27: Boolean \u003d true\n\nres28: Boolean \u003d true\n"
+      },
+      "dateCreated": "Nov 26, 2016 2:07:31 PM",
+      "dateStarted": "Nov 26, 2016 3:24:42 PM",
+      "dateFinished": "Nov 26, 2016 3:24:43 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "2.2",
+      "text": " def isSorted[A](as: Array[A], ordered: (A,A) \u003d\u003e Boolean): Boolean \u003d {\n    def loop(n: Int, l: A): Boolean \u003d {\n        if (n \u003e\u003d as.size) true else {\n            if(ordered(l, as(n))) {\n                loop(n+1, as(n))\n            } else {\n                false\n            }\n        }\n    }\n    \n    as.headOption match {\n        case Some(x) \u003d\u003e loop(1, x)\n        case None \u003d\u003e true\n    }\n }\n \n\n isSorted(Array(1,2,3,4), (x:Int,y:Int)\u003d\u003ex\u003cy) \u003d\u003d true\n isSorted(Array(1), (x:Int,y:Int)\u003d\u003ex\u003cy) \u003d\u003d true\n isSorted(Array(), (x:Int,y:Int)\u003d\u003ex\u003cy) \u003d\u003d true\n isSorted(Array(1,6, 9, 10), (x:Int,y:Int)\u003d\u003ex\u003cy) \u003d\u003d true\n isSorted(Array(1,6, 11, 10), (x:Int,y:Int)\u003d\u003ex\u003cy) \u003d\u003d false\n isSorted(Array(0, 0, 0, 0), (x:Int,y:Int)\u003d\u003ex\u003c\u003dy) \u003d\u003d true\n\n ",
+      "dateUpdated": "Nov 26, 2016 4:02:34 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1480169280895_-1947931743",
+      "id": "20161126-140800_1403680792",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nisSorted: [A](as: Array[A], ordered: (A, A) \u003d\u003e Boolean)Boolean\n\nres65: Boolean \u003d true\n\nres66: Boolean \u003d true\n\nres67: Boolean \u003d true\n\nres68: Boolean \u003d true\n\nres69: Boolean \u003d true\n\nres70: Boolean \u003d true\n"
+      },
+      "dateCreated": "Nov 26, 2016 2:08:00 PM",
+      "dateStarted": "Nov 26, 2016 4:02:34 PM",
+      "dateFinished": "Nov 26, 2016 4:02:35 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "def partial1[A,B,C](a: A, f: (A,B) \u003d\u003e C): B \u003d\u003e C \u003d {\n    def ret(b:B):C  \u003d\u003e f(a,b) \n    ret\n}",
+      "dateUpdated": "Nov 28, 2016 3:12:56 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1480170266457_-564472926",
+      "id": "20161126-142426_1406210341",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": ""
+      },
+      "dateCreated": "Nov 26, 2016 2:24:26 PM",
+      "dateStarted": "Nov 26, 2016 2:27:54 PM",
+      "dateFinished": "Nov 26, 2016 2:27:54 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "2.3",
+      "text": "def curry[A,B,C](f: (A, B) \u003d\u003e C): A \u003d\u003e (B \u003d\u003e C) \u003d {\n    (a: A) \u003d\u003e f(a, b:B)\n}",
+      "dateUpdated": "Nov 28, 2016 3:21:00 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1480346135967_-2007086472",
+      "id": "20161128-151535_1713446323",
+      "dateCreated": "Nov 28, 2016 3:15:35 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "fp",
+  "id": "2C1M36H2R",
+  "angularObjects": {
+    "2C2ZZSRXC:shared_process": [],
+    "2C51C6TPN:shared_process": [],
+    "2C4W6GJ47:shared_process": [],
+    "2C3PRW858:shared_process": [],
+    "2C3RPMM4N:shared_process": [],
+    "2C37KVJS3:shared_process": [],
+    "2C4568KH6:shared_process": [],
+    "2C3AP2DP2:shared_process": [],
+    "2C5E9EWPM:shared_process": [],
+    "2C35KRQXY:shared_process": [],
+    "2C5ABUPZ3:shared_process": [],
+    "2C5H4S7N4:shared_process": [],
+    "2C4CVQWMN:shared_process": [],
+    "2C4KAXEV7:shared_process": [],
+    "2C3NVXHC2:shared_process": [],
+    "2C3U71Y1T:shared_process": [],
+    "2C2RAFDA1:shared_process": [],
+    "2C4UAXH9X:shared_process": []
+  },
+  "config": {},
+  "info": {}
+}
