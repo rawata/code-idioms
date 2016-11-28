@@ -134,6 +134,35 @@
       "dateCreated": "Nov 28, 2016 3:15:35 PM",
       "status": "READY",
       "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "2.4",
+      "text": "def uncurry[A,B,C](f: A \u003d\u003e B \u003d\u003e C): (A, B) \u003d\u003e C \u003d {\n    (a: A, b: B) \u003d {\n        f(a)(b)\n    }\n}",
+      "dateUpdated": "Nov 28, 2016 3:32:51 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1480346988216_-504800193",
+      "id": "20161128-152948_1322805278",
+      "dateCreated": "Nov 28, 2016 3:29:48 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
     }
   ],
   "name": "fp",
