@@ -73,8 +73,8 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "def partial1[A,B,C](a: A, f: (A,B) \u003d\u003e C): B \u003d\u003e C \u003d {\n    def ret(b:B):C  \u003d\u003e f(a,b) \n    ret\n}",
-      "dateUpdated": "Nov 28, 2016 3:12:56 PM",
+      "text": "def partial1[A,B,C](a: A, f: (A,B) \u003d\u003e C): B \u003d\u003e C \u003d {\n    (b:B) \u003d\u003e f(a,b) \n    \n}",
+      "dateUpdated": "Nov 29, 2016 1:08:59 PM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -98,18 +98,18 @@
       "result": {
         "code": "SUCCESS",
         "type": "TEXT",
-        "msg": ""
+        "msg": "\npartial1: [A, B, C](a: A, f: (A, B) \u003d\u003e C)B \u003d\u003e C\n"
       },
       "dateCreated": "Nov 26, 2016 2:24:26 PM",
-      "dateStarted": "Nov 26, 2016 2:27:54 PM",
-      "dateFinished": "Nov 26, 2016 2:27:54 PM",
+      "dateStarted": "Nov 29, 2016 1:08:45 PM",
+      "dateFinished": "Nov 29, 2016 1:08:45 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "title": "2.3",
-      "text": "def curry[A,B,C](f: (A, B) \u003d\u003e C): A \u003d\u003e (B \u003d\u003e C) \u003d {\n    (a: A) \u003d\u003e f(a, b:B)\n}",
-      "dateUpdated": "Nov 28, 2016 3:21:00 PM",
+      "text": "def curry[A,B,C](f: (A, B) \u003d\u003e C): A \u003d\u003e (B \u003d\u003e C) \u003d {\n    (a: A) \u003d\u003e {\n        (b:B) \u003d\u003e f(a,b)\n    }\n}",
+      "dateUpdated": "Nov 29, 2016 1:22:55 PM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -131,14 +131,21 @@
       },
       "jobName": "paragraph_1480346135967_-2007086472",
       "id": "20161128-151535_1713446323",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\ncurry: [A, B, C](f: (A, B) \u003d\u003e C)A \u003d\u003e (B \u003d\u003e C)\n"
+      },
       "dateCreated": "Nov 28, 2016 3:15:35 PM",
-      "status": "READY",
+      "dateStarted": "Nov 29, 2016 1:22:55 PM",
+      "dateFinished": "Nov 29, 2016 1:22:56 PM",
+      "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "title": "2.4",
-      "text": "def uncurry[A,B,C](f: A \u003d\u003e B \u003d\u003e C): (A, B) \u003d\u003e C \u003d {\n    (a: A, b: B) \u003d {\n        f(a)(b)\n    }\n}",
-      "dateUpdated": "Nov 28, 2016 3:32:51 PM",
+      "text": "def uncurry[A,B,C](f: A \u003d\u003e B \u003d\u003e C): (A, B) \u003d\u003e C \u003d {\n    (a: A, b: B) \u003d\u003e {\n        f(a)(b)\n    }\n}\n",
+      "dateUpdated": "Nov 29, 2016 1:07:45 PM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -160,7 +167,76 @@
       },
       "jobName": "paragraph_1480346988216_-504800193",
       "id": "20161128-152948_1322805278",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nuncurry: [A, B, C](f: A \u003d\u003e (B \u003d\u003e C))(A, B) \u003d\u003e C\n"
+      },
       "dateCreated": "Nov 28, 2016 3:29:48 PM",
+      "dateStarted": "Nov 29, 2016 1:07:45 PM",
+      "dateFinished": "Nov 29, 2016 1:07:46 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "2.5",
+      "text": "def compose[A,B,C](f: B \u003d\u003e C, g: A \u003d\u003e B): A \u003d\u003e C \u003d {\n    (a:A) \u003d\u003e f(g(a))\n}\n",
+      "dateUpdated": "Nov 29, 2016 1:27:09 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1480424849429_-1733285848",
+      "id": "20161129-130729_769836801",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\ncompose: [A, B, C](f: B \u003d\u003e C, g: A \u003d\u003e B)A \u003d\u003e C\n"
+      },
+      "dateCreated": "Nov 29, 2016 1:07:29 PM",
+      "dateStarted": "Nov 29, 2016 1:27:09 PM",
+      "dateFinished": "Nov 29, 2016 1:27:09 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "",
+      "dateUpdated": "Nov 29, 2016 1:27:19 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1480426029068_-1843468006",
+      "id": "20161129-132709_1116210557",
+      "dateCreated": "Nov 29, 2016 1:27:09 PM",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }
