@@ -3,7 +3,7 @@
     {
       "title": "2.1",
       "text": "def fib(n: Int): Int \u003d n match {\n    case i if (i \u003c\u003d 0) \u003d\u003e 0\n    case 1 \u003d\u003e 1\n    case _ \u003d\u003e fib(n-1) + fib(n-2)\n}\n\nfib(0) \u003d\u003d 0\nfib(1) \u003d\u003d 1\nfib(2) \u003d\u003d 1\nfib(5) \u003d\u003d 5\nfib(-2) \u003d\u003d 0",
-      "dateUpdated": "Nov 26, 2016 3:27:55 PM",
+      "dateUpdated": "Nov 26, 2016 3:27:55 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -30,16 +30,16 @@
         "type": "TEXT",
         "msg": "\nfib: (n: Int)Int\n\nres24: Boolean \u003d true\n\nres25: Boolean \u003d true\n\nres26: Boolean \u003d true\n\nres27: Boolean \u003d true\n\nres28: Boolean \u003d true\n"
       },
-      "dateCreated": "Nov 26, 2016 2:07:31 PM",
-      "dateStarted": "Nov 26, 2016 3:24:42 PM",
-      "dateFinished": "Nov 26, 2016 3:24:43 PM",
+      "dateCreated": "Nov 26, 2016 2:07:31 AM",
+      "dateStarted": "Nov 26, 2016 3:24:42 AM",
+      "dateFinished": "Nov 26, 2016 3:24:43 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "title": "2.2",
       "text": " def isSorted[A](as: Array[A], ordered: (A,A) \u003d\u003e Boolean): Boolean \u003d {\n    def loop(n: Int, l: A): Boolean \u003d {\n        if (n \u003e\u003d as.size) true else {\n            if(ordered(l, as(n))) {\n                loop(n+1, as(n))\n            } else {\n                false\n            }\n        }\n    }\n    \n    as.headOption match {\n        case Some(x) \u003d\u003e loop(1, x)\n        case None \u003d\u003e true\n    }\n }\n \n\n isSorted(Array(1,2,3,4), (x:Int,y:Int)\u003d\u003ex\u003cy) \u003d\u003d true\n isSorted(Array(1), (x:Int,y:Int)\u003d\u003ex\u003cy) \u003d\u003d true\n isSorted(Array(), (x:Int,y:Int)\u003d\u003ex\u003cy) \u003d\u003d true\n isSorted(Array(1,6, 9, 10), (x:Int,y:Int)\u003d\u003ex\u003cy) \u003d\u003d true\n isSorted(Array(1,6, 11, 10), (x:Int,y:Int)\u003d\u003ex\u003cy) \u003d\u003d false\n isSorted(Array(0, 0, 0, 0), (x:Int,y:Int)\u003d\u003ex\u003c\u003dy) \u003d\u003d true\n\n ",
-      "dateUpdated": "Nov 26, 2016 4:02:34 PM",
+      "dateUpdated": "Nov 26, 2016 4:02:34 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -66,15 +66,15 @@
         "type": "TEXT",
         "msg": "\nisSorted: [A](as: Array[A], ordered: (A, A) \u003d\u003e Boolean)Boolean\n\nres65: Boolean \u003d true\n\nres66: Boolean \u003d true\n\nres67: Boolean \u003d true\n\nres68: Boolean \u003d true\n\nres69: Boolean \u003d true\n\nres70: Boolean \u003d true\n"
       },
-      "dateCreated": "Nov 26, 2016 2:08:00 PM",
-      "dateStarted": "Nov 26, 2016 4:02:34 PM",
-      "dateFinished": "Nov 26, 2016 4:02:35 PM",
+      "dateCreated": "Nov 26, 2016 2:08:00 AM",
+      "dateStarted": "Nov 26, 2016 4:02:34 AM",
+      "dateFinished": "Nov 26, 2016 4:02:35 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "def partial1[A,B,C](a: A, f: (A,B) \u003d\u003e C): B \u003d\u003e C \u003d {\n    (b:B) \u003d\u003e f(a,b) \n    \n}",
-      "dateUpdated": "Nov 29, 2016 1:08:59 PM",
+      "dateUpdated": "Nov 29, 2016 1:08:59 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -100,16 +100,16 @@
         "type": "TEXT",
         "msg": "\npartial1: [A, B, C](a: A, f: (A, B) \u003d\u003e C)B \u003d\u003e C\n"
       },
-      "dateCreated": "Nov 26, 2016 2:24:26 PM",
-      "dateStarted": "Nov 29, 2016 1:08:45 PM",
-      "dateFinished": "Nov 29, 2016 1:08:45 PM",
+      "dateCreated": "Nov 26, 2016 2:24:26 AM",
+      "dateStarted": "Nov 29, 2016 1:08:45 AM",
+      "dateFinished": "Nov 29, 2016 1:08:45 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "title": "2.3",
       "text": "def curry[A,B,C](f: (A, B) \u003d\u003e C): A \u003d\u003e (B \u003d\u003e C) \u003d {\n    (a: A) \u003d\u003e {\n        (b:B) \u003d\u003e f(a,b)\n    }\n}",
-      "dateUpdated": "Nov 29, 2016 1:22:55 PM",
+      "dateUpdated": "Nov 29, 2016 1:22:55 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -136,16 +136,16 @@
         "type": "TEXT",
         "msg": "\ncurry: [A, B, C](f: (A, B) \u003d\u003e C)A \u003d\u003e (B \u003d\u003e C)\n"
       },
-      "dateCreated": "Nov 28, 2016 3:15:35 PM",
-      "dateStarted": "Nov 29, 2016 1:22:55 PM",
-      "dateFinished": "Nov 29, 2016 1:22:56 PM",
+      "dateCreated": "Nov 28, 2016 3:15:35 AM",
+      "dateStarted": "Nov 29, 2016 1:22:55 AM",
+      "dateFinished": "Nov 29, 2016 1:22:56 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "title": "2.4",
       "text": "def uncurry[A,B,C](f: A \u003d\u003e B \u003d\u003e C): (A, B) \u003d\u003e C \u003d {\n    (a: A, b: B) \u003d\u003e {\n        f(a)(b)\n    }\n}\n",
-      "dateUpdated": "Nov 29, 2016 1:07:45 PM",
+      "dateUpdated": "Nov 29, 2016 1:07:45 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -172,16 +172,16 @@
         "type": "TEXT",
         "msg": "\nuncurry: [A, B, C](f: A \u003d\u003e (B \u003d\u003e C))(A, B) \u003d\u003e C\n"
       },
-      "dateCreated": "Nov 28, 2016 3:29:48 PM",
-      "dateStarted": "Nov 29, 2016 1:07:45 PM",
-      "dateFinished": "Nov 29, 2016 1:07:46 PM",
+      "dateCreated": "Nov 28, 2016 3:29:48 AM",
+      "dateStarted": "Nov 29, 2016 1:07:45 AM",
+      "dateFinished": "Nov 29, 2016 1:07:46 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "title": "2.5",
       "text": "def compose[A,B,C](f: B \u003d\u003e C, g: A \u003d\u003e B): A \u003d\u003e C \u003d {\n    (a:A) \u003d\u003e f(g(a))\n}\n",
-      "dateUpdated": "Nov 29, 2016 1:27:09 PM",
+      "dateUpdated": "Nov 29, 2016 1:27:09 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -208,15 +208,85 @@
         "type": "TEXT",
         "msg": "\ncompose: [A, B, C](f: B \u003d\u003e C, g: A \u003d\u003e B)A \u003d\u003e C\n"
       },
-      "dateCreated": "Nov 29, 2016 1:07:29 PM",
-      "dateStarted": "Nov 29, 2016 1:27:09 PM",
-      "dateFinished": "Nov 29, 2016 1:27:09 PM",
+      "dateCreated": "Nov 29, 2016 1:07:29 AM",
+      "dateStarted": "Nov 29, 2016 1:27:09 AM",
+      "dateFinished": "Nov 29, 2016 1:27:09 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
+      "title": "3.1,2,",
+      "text": "{\n    sealed trait List[+A]\n    case object Nil extends List[Nothing]\n    case class Cons[+A](head: A, tail: List[A]) extends List[A]\n    \n    object List {\n        def apply[A](a: A*): List[A] \u003d {\n            if (a.isEmpty) Nil \n            else Cons(a.head, apply(a.tail: _*))\n        }\n        \n        def sum(ints: List[Int]): Int \u003d ints match {\n            case Nil \u003d\u003e 0\n            case Cons(x,xs) \u003d\u003e x + sum(xs)\n        }\n        \n    }\n    \n    val val1: List[Double] \u003d Nil\n    val x \u003d List(1,2,3,4,5) match {\n      case Cons(x, Cons(2, Cons(4, _))) \u003d\u003e x\n      case Nil \u003d\u003e 42\n      case Cons(x, Cons(y, Cons(3, Cons(4, _)))) \u003d\u003e x + y\n      case Cons(h, t) \u003d\u003e h + List.sum(t)\n      case _ \u003d\u003e 101\n    }\n\n    def tail[A](l: List[A]): List[A] \u003d l match {\n        case Nil \u003d\u003e sys.error(\"empty list\")\n        case Cons(_, t) \u003d\u003e t\n    }\n    \n    \n    println(x)\n    tail(List(1,2,3)) \u003d\u003d List(2,3)\n}\n\n\n",
+      "dateUpdated": "Dec 6, 2016 9:03:28 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1480426029068_-1843468006",
+      "id": "20161129-132709_1116210557",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "3\n\nres0: Boolean \u003d true\n"
+      },
+      "dateCreated": "Nov 29, 2016 1:27:09 AM",
+      "dateStarted": "Dec 6, 2016 9:03:28 AM",
+      "dateFinished": "Dec 6, 2016 9:03:38 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "\n",
+      "dateUpdated": "Nov 30, 2016 1:35:38 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1480497889647_-34016493",
+      "id": "20161130-092449_2050853063",
+      "result": {
+        "code": "ERROR",
+        "type": "TEXT",
+        "msg": "\n\n\n\n\n\u003cconsole\u003e:32: error: pattern type is incompatible with expected type;\n found   : Nil.type\n required: List[A]\n           case Nil \u003d\u003e sys.error(\"empty list\")\n                ^\n"
+      },
+      "dateCreated": "Nov 30, 2016 9:24:49 AM",
+      "dateStarted": "Nov 30, 2016 1:32:55 AM",
+      "dateFinished": "Nov 30, 2016 1:32:55 AM",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
       "text": "",
-      "dateUpdated": "Nov 29, 2016 1:27:19 PM",
+      "dateUpdated": "Nov 29, 2016 4:24:30 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -234,9 +304,9 @@
         "params": {},
         "forms": {}
       },
-      "jobName": "paragraph_1480426029068_-1843468006",
-      "id": "20161129-132709_1116210557",
-      "dateCreated": "Nov 29, 2016 1:27:09 PM",
+      "jobName": "paragraph_1480436659964_2077893234",
+      "id": "20161129-162419_598451721",
+      "dateCreated": "Nov 29, 2016 4:24:19 AM",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }
