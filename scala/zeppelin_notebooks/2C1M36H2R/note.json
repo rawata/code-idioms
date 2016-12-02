@@ -215,9 +215,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "title": "3.1,2,",
-      "text": "{\n    sealed trait List[+A]\n    case object Nil extends List[Nothing]\n    case class Cons[+A](head: A, tail: List[A]) extends List[A]\n    \n    object List {\n        def apply[A](a: A*): List[A] \u003d {\n            if (a.isEmpty) Nil \n            else Cons(a.head, apply(a.tail: _*))\n        }\n        \n        def sum(ints: List[Int]): Int \u003d ints match {\n            case Nil \u003d\u003e 0\n            case Cons(x,xs) \u003d\u003e x + sum(xs)\n        }\n        \n    }\n    \n    val val1: List[Double] \u003d Nil\n    val x \u003d List(1,2,3,4,5) match {\n      case Cons(x, Cons(2, Cons(4, _))) \u003d\u003e x\n      case Nil \u003d\u003e 42\n      case Cons(x, Cons(y, Cons(3, Cons(4, _)))) \u003d\u003e x + y\n      case Cons(h, t) \u003d\u003e h + List.sum(t)\n      case _ \u003d\u003e 101\n    }\n\n    def tail[A](l: List[A]): List[A] \u003d l match {\n        case Nil \u003d\u003e sys.error(\"empty list\")\n        case Cons(_, t) \u003d\u003e t\n    }\n    \n    def setHead[A](h: A, l: List[A]) \u003d Cons(h, l)\n    \n    println(x)\n    println(tail(List(1,2,3)) \u003d\u003d List(2,3))\n    println(setHead(0, List(1,2,3)) \u003d\u003d List(0,1,2,3))\n}\n\n\n",
-      "dateUpdated": "Dec 6, 2016 9:14:49 AM",
+      "title": "3.1,2,3,4",
+      "text": "{\n    sealed trait List[+A]\n    case object Nil extends List[Nothing]\n    case class Cons[+A](head: A, tail: List[A]) extends List[A]\n    \n    object List {\n        def apply[A](a: A*): List[A] \u003d {\n            if (a.isEmpty) Nil \n            else Cons(a.head, apply(a.tail: _*))\n        }\n        \n        def sum(ints: List[Int]): Int \u003d ints match {\n            case Nil \u003d\u003e 0\n            case Cons(x,xs) \u003d\u003e x + sum(xs)\n        }\n        \n    }\n    \n    val val1: List[Double] \u003d Nil\n    val x \u003d List(1,2,3,4,5) match {\n      case Cons(x, Cons(2, Cons(4, _))) \u003d\u003e x\n      case Nil \u003d\u003e 42\n      case Cons(x, Cons(y, Cons(3, Cons(4, _)))) \u003d\u003e x + y\n      case Cons(h, t) \u003d\u003e h + List.sum(t)\n      case _ \u003d\u003e 101\n    }\n\n    def tail[A](l: List[A]): List[A] \u003d l match {\n        case Nil \u003d\u003e sys.error(\"empty list\")\n        case Cons(_, t) \u003d\u003e t\n    }\n    \n    def setHead[A](h: A, l: List[A]) \u003d Cons(h, l)\n\n    def drop[A](l: List[A], n: Int): List[A] \u003d l match {\n        case Nil \u003d\u003e Nil\n        case _ if(n \u003d\u003d 0) \u003d\u003e l\n        case Cons(_, t) \u003d\u003e drop(t, n-1)\n    }\n    \n    println(x)\n    println(tail(List(1,2,3)) \u003d\u003d List(2,3))\n    println(setHead(0, List(1,2,3)) \u003d\u003d List(0,1,2,3))\n    println(drop(List(1,2,3), 2) \u003d\u003d List(3))\n    println(drop(List(1,2,3), 7) \u003d\u003d List())\n    println(drop(List(1,2,3), 7) \u003d\u003d List())\n}\n\n\n",
+      "dateUpdated": "Dec 6, 2016 9:25:47 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -242,11 +242,11 @@
       "result": {
         "code": "SUCCESS",
         "type": "TEXT",
-        "msg": "3\ntrue\ntrue\n"
+        "msg": "3\ntrue\ntrue\ntrue\ntrue\n"
       },
       "dateCreated": "Nov 29, 2016 1:27:09 AM",
-      "dateStarted": "Dec 6, 2016 9:14:49 AM",
-      "dateFinished": "Dec 6, 2016 9:14:49 AM",
+      "dateStarted": "Dec 6, 2016 9:24:10 AM",
+      "dateFinished": "Dec 6, 2016 9:24:11 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
